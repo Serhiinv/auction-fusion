@@ -1,22 +1,39 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const menuRef = useRef<HTMLDivElement>(null);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                setIsMenuOpen(false);
+            }
+        };
+
+        if (isMenuOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        }
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [isMenuOpen]);
+
     return (
-        <nav className="bg-gray-100 dark:bg-gray-800 shadow-md md:relative md:top-auto sticky top-0 z-50">
+        <nav ref={menuRef} className="bg-gray-100 dark:bg-gray-800 shadow-md md:relative md:top-auto sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Left side: Logo and main nav buttons */}
                     <div className="flex items-center gap-8">
                         {/* Logo */}
-                        <Link href="/" className="flex-shrink-0">
+                        <Link href="/" className="flex-shrink-0" onClick={() => setIsMenuOpen(false)}>
                             <img
                                 alt="Auction Fusion logo"
                                 src="/logo.jpeg"
