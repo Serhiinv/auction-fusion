@@ -5,6 +5,7 @@ import {Providers} from "@/providers/providers";
 
 import * as React from "react";
 import Header from "@/components/UI/header";
+import Footer from "@/components/UI/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,16 +28,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased h-full`}
       >
       <Providers>
+        <div className="flex flex-col min-h-screen bg-white text-gray-900">
           <Header />
-        {children}
-      <h1 className="text-center">footer</h1>
+          <main className="flex-grow bg-white text-gray-900">
+            {children}
+          </main>
+          <Footer />
+        </div>
       </Providers>
-
       </body>
     </html>
   );
