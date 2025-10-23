@@ -2,6 +2,8 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
+const basePath = process.env.NODE_ENV === 'production' ? '/auction-fusion' : '';
+
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
@@ -36,7 +38,7 @@ export default function Header() {
                         <Link href="/" className="flex-shrink-0" onClick={() => setIsMenuOpen(false)}>
                             <img
                                 alt="Auction Fusion logo"
-                                src="/logo.jpeg"
+                                src={`${basePath}/logo.jpeg`}
                                 className="h-10 w-auto"
                             />
                         </Link>

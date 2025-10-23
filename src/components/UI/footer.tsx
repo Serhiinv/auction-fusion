@@ -1,5 +1,7 @@
 import * as React from "react";
 
+const basePath = process.env.NODE_ENV === 'production' ? '/auction-fusion' : '';
+
 export default function Footer() {
     return (
         <footer className="text-center py-4 bg-gray-100 dark:bg-gray-800">
@@ -15,7 +17,7 @@ export default function Footer() {
                         width="30"
                         height="30"
                         decoding="async"
-                        src="/social-media-linkedin.svg"
+                        src={`${basePath}/social-media-linkedin.svg`}
                     />
                 </a>
             </div>
