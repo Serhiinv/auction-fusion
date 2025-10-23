@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import * as React from "react";
 
 const basePath = process.env.NODE_ENV === 'production' ? '/auction-fusion' : '';
 
@@ -46,31 +47,32 @@ export default function Header() {
                         {/* Desktop Navigation - 3 buttons */}
                         <div className="hidden md:flex items-center gap-6">
                             <Link
-                                href="#"
-                                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors"
+                                href="/features"
+                                className="text-gray-700 dark:text-gray-300 hover:underline dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors"
                             >
                                 Features
                             </Link>
                             <Link
                                 href="/customers"
-                                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors"
+                                className="text-gray-700 dark:text-gray-300 hover:underline dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors"
                             >
                                 Customers
                             </Link>
                             <Link
                                 href="/partners"
-                                className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors"
+                                className="text-gray-700 dark:text-gray-300 hover:underline dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors"
                             >
                                 Partners
                             </Link>
                         </div>
                     </div>
+                    <p className="text-4xl md:text-5xl font-bold pt-1 mb-1 text-center">TEST</p>
 
                     {/* Right side: About Us button */}
                     <div className="hidden md:flex items-center">
                         <Link
                             href="/contact"
-                            className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-4 py-2 text-sm font-medium transition-colors"
+                            className="text-gray-700 dark:text-gray-300 hover:underline dark:hover:text-blue-400 px-4 py-2 text-sm font-medium transition-colors"
                         >
                             Contact Us
                         </Link>
@@ -116,7 +118,7 @@ export default function Header() {
                 <div className="md:hidden border-t border-gray-200 dark:border-gray-700">
                     <div className="px-2 pt-2 pb-3 space-y-1">
                         <Link
-                            href="#"
+                            href="/features"
                             className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                             onClick={() => setIsMenuOpen(false)}
                         >

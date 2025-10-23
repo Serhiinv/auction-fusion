@@ -35,6 +35,7 @@ export default function RootLayout({
       <Providers>
         <div className="flex flex-col min-h-screen bg-white text-gray-900">
           <Header />
+            <p className=" text-center text-orange-700">TEST - TEST - TEST - TEST - TEST - TEST</p>
           <main className="flex-grow bg-white text-gray-900">
             {children}
           </main>
