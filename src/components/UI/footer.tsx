@@ -1,6 +1,5 @@
 import * as React from "react";
-
-const basePath = process.env.NODE_ENV === 'production' ? '/auction-fusion' : '';
+import { basePath } from "@/config/basePath";
 
 export default function Footer() {
     return (

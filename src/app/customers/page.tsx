@@ -1,4 +1,5 @@
 import * as React from "react";
+import { basePath } from "@/config/basePath";
 
 const ContactPage = () => {
     return (
@@ -15,7 +16,7 @@ const ContactPage = () => {
                             <a href="https://www.lyonandturnbull.com/" target="_blank" rel="noopener noreferrer" className="block">
                                 <img
                                     alt="Customers"
-                                    src="/l&t_logo.svg"
+                                    src={`${basePath}/l&t_logo.svg`}
                                     className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
                                 />
                             </a>
@@ -24,7 +25,7 @@ const ContactPage = () => {
                             <a href="https://sgbaldwins.com/" target="_blank" rel="noopener noreferrer" className="block">
                                 <img
                                     alt="Partners diagram"
-                                    src="/sgb_logo.svg"
+                                    src={`${basePath}/sgb_logo.svg`}
                                     className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
                                 />
                             </a>

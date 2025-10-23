@@ -2,8 +2,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import * as React from "react";
-
-const basePath = process.env.NODE_ENV === 'production' ? '/auction-fusion' : '';
+import { basePath } from "@/config/basePath";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
