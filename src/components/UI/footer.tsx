@@ -3,12 +3,13 @@ import { basePath } from "@/config/basePath";
 
 export default function Footer() {
     return (
-        <footer className="text-center py-4 bg-gray-100 dark:bg-gray-800">
+        <footer className="text-center py-4 bg-gray-100">
             <div className="flex justify-center mb-2">
                 <a
                     target="_blank"
                     href="https://www.linkedin.com/company/binary-vision-ltd/"
                     className="hover:opacity-80 transition-opacity"
+                    rel="noreferrer"
                 >
                     <img
                         alt="Linkedin"
@@ -21,7 +22,7 @@ export default function Footer() {
                 </a>
             </div>
 
-            <p className="text-gray-700 dark:text-gray-300">&copy; Binary Vision 2025</p>
+            <p className="text-gray-700">&copy; Binary Vision 2025</p>
         </footer>
     );
 }

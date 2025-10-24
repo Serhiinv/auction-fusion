@@ -29,7 +29,7 @@ export default function Header() {
     }, [isMenuOpen]);
 
     return (
-        <nav ref={menuRef} className="bg-gray-100 dark:bg-gray-800 shadow-md md:relative md:top-auto sticky top-0 z-50">
+        <nav ref={menuRef} className="bg-gray-100 shadow-md md:relative md:top-auto sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Left side: Logo and main nav buttons */}
@@ -47,19 +47,19 @@ export default function Header() {
                         <div className="hidden md:flex items-center gap-6">
                             <Link
                                 href="/features"
-                                className="text-gray-700 dark:text-gray-300 hover:underline dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors"
+                                className="text-gray-700 hover:underline px-3 py-2 text-sm font-medium transition-colors"
                             >
                                 Features
                             </Link>
                             <Link
                                 href="/customers"
-                                className="text-gray-700 dark:text-gray-300 hover:underline dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors"
+                                className="text-gray-700 hover:underline px-3 py-2 text-sm font-medium transition-colors"
                             >
                                 Customers
                             </Link>
                             <Link
                                 href="/partners"
-                                className="text-gray-700 dark:text-gray-300 hover:underline dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors"
+                                className="text-gray-700 hover:underline px-3 py-2 text-sm font-medium transition-colors"
                             >
                                 Partners
                             </Link>
@@ -71,7 +71,7 @@ export default function Header() {
                     <div className="hidden md:flex items-center">
                         <Link
                             href="/contact"
-                            className="text-gray-700 dark:text-gray-300 hover:underline dark:hover:text-blue-400 px-4 py-2 text-sm font-medium transition-colors"
+                            className="text-gray-700 hover:underline px-4 py-2 text-sm font-medium transition-colors"
                         >
                             Contact Us
                         </Link>
@@ -81,7 +81,7 @@ export default function Header() {
                     <div className="md:hidden">
                         <button
                             onClick={toggleMenu}
-                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors"
+                            className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors"
                             aria-expanded={isMenuOpen}
                             aria-label="Toggle menu"
                         >
@@ -114,32 +114,32 @@ export default function Header() {
 
             {/* Mobile menu */}
             {isMenuOpen && (
-                <div className="md:hidden border-t border-gray-200 dark:border-gray-700">
+                <div className="md:hidden border-t border-gray-200">
                     <div className="px-2 pt-2 pb-3 space-y-1">
                         <Link
                             href="/features"
-                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200 transition-colors"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Features
                         </Link>
                         <Link
                             href="/customers"
-                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200 transition-colors"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Customers
                         </Link>
                         <Link
                             href="/partners"
-                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200 transition-colors"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Partners
                         </Link>
                         <Link
                             href="/contact"
-                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-200 transition-colors"
                             onClick={() => setIsMenuOpen(false)}
                         >
                             Contact Us
