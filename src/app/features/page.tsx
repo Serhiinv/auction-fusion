@@ -4,7 +4,6 @@ const FeaturesPage = () => {
             <div className="w-full bg-blue-100 text-gray-900 flex flex-col p-20">
                 <h1 className="text-4xl md:text-5xl font-bold pt-6 mb-6 text-center">Why Auction Fusion?</h1>
 
-
                 <div className="w-full px-4 md:px-8 py-2">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto mb-5">
 
