@@ -1,6 +1,21 @@
 import * as React from "react";
 import { basePath } from "@/config/basePath";
 
+const customers = [
+    {
+        name: "Lyon & Turnbull",
+        url: "https://www.lyonandturnbull.com/",
+        logo: "l&t_logo.svg",
+        alt: "Lyon & Turnbull"
+    },
+    {
+        name: "SG Baldwins",
+        url: "https://sgbaldwins.com/",
+        logo: "sgb_logo.svg",
+        alt: "SG Baldwins"
+    }
+];
+
 const CustomersPage = () => {
     return (
         <>
@@ -12,24 +27,22 @@ const CustomersPage = () => {
 
                 <div className="w-full px-4 md:px-8 py-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto mb-40">
-                        <div className="bg-white p-4 pt-18 rounded-lg shadow-md">
-                            <a href="https://www.lyonandturnbull.com/" target="_blank" rel="noopener noreferrer" className="block">
-                                <img
-                                    alt="Customers"
-                                    src={`${basePath}/l&t_logo.svg`}
-                                    className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-                                />
-                            </a>
-                        </div>
-                        <div className="bg-white p-4 pt-8 pb-10 rounded-lg shadow-md">
-                            <a href="https://sgbaldwins.com/" target="_blank" rel="noopener noreferrer" className="block">
-                                <img
-                                    alt="Partners diagram"
-                                    src={`${basePath}/sgb_logo.svg`}
-                                    className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
-                                />
-                            </a>
-                        </div>
+                        {customers.map((customer) => (
+                            <div key={customer.name} className="bg-white p-4 pt-8 pb-10 rounded-lg shadow-md">
+                                <a
+                                    href={customer.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block"
+                                >
+                                    <img
+                                        alt={customer.alt}
+                                        src={`${basePath}/${customer.logo}`}
+                                        className="w-full h-auto cursor-pointer hover:opacity-90 transition-opacity"
+                                    />
+                                </a>
+                            </div>
+                        ))}
                     </div>
                 </div>
 

@@ -39,7 +39,6 @@ export default function RootLayout({
           <main className="flex-grow bg-white text-gray-900">
             {children}
           </main>
-            <h1 className="text-4xl md:text-5xl font-bold pt-6 mb-6 text-center">TEST TEST</h1>
           <Footer />
         </div>
       </Providers>
