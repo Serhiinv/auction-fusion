@@ -1,7 +1,7 @@
 import * as React from "react";
 import { basePath } from "@/config/basePath";
 
-const ContactPage = () => {
+const CustomersPage = () => {
     return (
         <>
             <div className="w-full bg-blue-100 text-gray-900 flex flex-col">
@@ -37,4 +37,4 @@ const ContactPage = () => {
         </>
     )
 }
-export default ContactPage;
+export default CustomersPage;
